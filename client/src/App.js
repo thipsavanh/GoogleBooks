@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
    <div>
-     Hello! I am working.
+     Soon you'll be able to search for books and save them.
    </div>
   );
 }
