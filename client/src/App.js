@@ -1,12 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Search from "./pages/Search";
+import Results from "./pages/Results";
+import Saved from "./pages/Saved";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
+
 
 function App() {
   return (
-   <div>
-     Soon you'll be able to search for books and save them.
-   </div>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+        <Route exact path="/" component={Search} />
+        <Route exact path="/results" component={Results} />
+        <Route exact path="/saved" component={Saved} />
+        <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
