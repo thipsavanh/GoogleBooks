@@ -88,7 +88,7 @@ class Results extends Component {
                                     <BookBtn
                                         key={ "" + book.id + index }
                                         btntype="info"
-                                        // disabled={ book.volumeInfo.infoLink === "/" }
+                                        disabled={ book.volumeInfo.infoLink === "/" }
                                         onClick={() => this.saveBook({
                                             title: book.volumeInfo.title,
                                             author: book.volumeInfo.authors[0],

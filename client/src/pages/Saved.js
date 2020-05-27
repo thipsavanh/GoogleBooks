@@ -90,7 +90,7 @@ class Saved extends Component {
                                         key={ book._id + "btn" }
                                         btntype="info"
                                         id={ book._id }
-                                        // disabled={ book.link === "/" }
+                                        disabled={ book.link === "/" }
                                         onClick={ () => this.deleteBook(
                                             book._id
                                         ) }
