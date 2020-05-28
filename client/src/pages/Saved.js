@@ -68,7 +68,7 @@ class Saved extends Component {
                     <h2>Saved Books</h2>
                     <List>
                         {this.state.books.map(book => (
-                            <ListItem key={book.id}>
+                            <ListItem key={book._id}>
                                 <div className="date-div">
                                     <a
                                         key={ book._id + "link" }
@@ -77,7 +77,7 @@ class Saved extends Component {
                                     >
                                         { book.title }
                                     </a>
-                                    <p>Author: { book.authors }</p>
+                                    <p>Author: { book.author }</p>
                                     <p>
                                         <img align="left" style={{ paddingRight: 10 }}
                                              src={ book.image } alt="new"

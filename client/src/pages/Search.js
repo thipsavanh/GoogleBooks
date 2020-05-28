@@ -52,14 +52,14 @@ class Search extends Component {
                         <Container fluid>
                             <form>
                                 <Input
-                                    value={ this.state.title }
+                                    value={ this.state.query }
                                     onChange={ this.handleInputChange }
                                     name="title"
                                     placeholder="Title (required)"
                                 />
                                 <FormBtn
                                     className="btn btn-info"
-                                    onClick={ this.handleFormSubmit }   
+                                    onClick={ this.handleFormSubmit }
                                 >
                                     Search
                                </FormBtn>

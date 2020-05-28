@@ -11,3 +11,11 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }  
+
+  .bg-primary {
+    background-color: teal !important;
+  }
+
+  .btn-success {
+    background-color: teal;
+  }
