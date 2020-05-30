@@ -15,7 +15,7 @@ class Results extends Component {
 
     componentDidMount() {
         const data = this.props.location.data
-        if (data && data.results.length > 0) {
+        if (data && data.results > 0) {
             this.setState({
                 books: data.results.filter((value, index) => index < 5),
                 target: "_blank"

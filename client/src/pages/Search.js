@@ -7,7 +7,7 @@ import { Input, FormBtn } from "../components/Form";
 
 class Search extends Component {
     state = {
-        title: "",
+        query: "",
         toResults: false,
         results: []
     };
@@ -21,10 +21,12 @@ class Search extends Component {
 
     handleFormSubmit = e => {
         e.preventDefault();
+        console.log(this.state.query);
         if (this.state.query) {
             const query = this.state.query.trim();
             API.searchBooks(query)
                 .then(res => {
+                    console.log(res.data.items);
                     this.setState({
                         toResults: true,
                         results: res.data.items
@@ -54,7 +56,7 @@ class Search extends Component {
                                 <Input
                                     value={ this.state.query }
                                     onChange={ this.handleInputChange }
-                                    name="title"
+                                    name="query"
                                     placeholder="Title (required)"
                                 />
                                 <FormBtn
